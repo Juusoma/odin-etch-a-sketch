@@ -22,7 +22,8 @@ h1{
     flex-direction: row;
     flex-wrap: wrap;
     align-content: start;
-    max-width: 128px;
+    width: 512px;
+    height: 512px;
 
     border: 2px solid red;
     border-radius: 8px;
@@ -30,8 +31,6 @@ h1{
 
 .etch-node{
     background-color: grey;
-    width: 32px;
-    height: 32px;
     transition: all .1s;
 }
 

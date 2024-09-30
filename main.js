@@ -1,13 +1,14 @@
 const etchContainer = document.querySelector(".etch-container");
 etchContainer.addEventListener("mouseover", onEtchHover);
 etchContainer.addEventListener("mouseover", () => console.log("mouse enter"));
+
+const gridSize = 512;
+let nodeWidth = 0;
+etchContainer.style["width"] = gridSize + "px";
+etchContainer.style["height"] = gridSize + "px";
+
 function clearGrid(){
     etchContainer.innerHTML = "";
-}
-
-function adjustGridMaxWidth(gridWidth){
-    const nodeWidth = 32;
-    etchContainer.style["max-width"] = gridWidth * nodeWidth + "px";
 }
 
 function onEtchHover(e){
@@ -24,22 +25,22 @@ function onNodeHover(node){
 function createGrid(){
     clearGrid();
 
-    const gridWidth = 16;
-    const gridHeight = 16;
+    const nodesPerLine = 8;
+    nodeSize = gridSize / nodesPerLine;
 
     function addNode(){
         const newNode = document.createElement("div");
         newNode.className = "etch-node";
+        newNode.style.width = nodeSize + "px";
+        newNode.style.height = nodeSize + "px";
         etchContainer.appendChild(newNode);
     }
 
-    for(let x = 0; x < gridWidth; x++){
-        for(let y = 0; y < gridHeight; y++){
+    for(let x = 0; x < nodesPerLine; x++){
+        for(let y = 0; y < nodesPerLine; y++){
             addNode();
         }
     }
-
-    adjustGridMaxWidth(gridWidth);
 }
 
 createGrid();
