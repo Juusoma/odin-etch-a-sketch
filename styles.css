@@ -19,15 +19,19 @@ body{
     flex-wrap: wrap;
     align-content: start;
     max-width: 128px;
-    flex-basis: 25%;
+
+    border: 2px solid red;
+    border-radius: 8px;
 }
 
 .etch-node{
     background-color: grey;
     width: 32px;
     height: 32px;
+    transition: all .2s;
 }
 
 .etch-node:hover{
-    background-color: red;
+    filter: brightness(1.25);
+    scale: 1.2;
 }
