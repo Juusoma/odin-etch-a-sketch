@@ -2,7 +2,6 @@ const etchContainer = document.querySelector(".etch-container");
 etchContainer.addEventListener("mouseover", onEtchHover);
 
 const gridSize = 512;
-let nodeWidth = 0;
 etchContainer.style["width"] = gridSize + "px";
 etchContainer.style["height"] = gridSize + "px";
 
