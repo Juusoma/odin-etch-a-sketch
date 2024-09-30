@@ -1,6 +1,5 @@
 const etchContainer = document.querySelector(".etch-container");
 etchContainer.addEventListener("mouseover", onEtchHover);
-etchContainer.addEventListener("mouseover", () => console.log("mouse enter"));
 
 const gridSize = 512;
 let nodeWidth = 0;
@@ -43,3 +42,27 @@ function createGrid(nodesPerLine){
 }
 
 createGrid(16);
+
+const gridSizeSelectionButtons = document.querySelector(".grid-size-button-container");
+gridSizeSelectionButtons.addEventListener("click", (e) => {
+    let desiredGridSize = 0;
+    switch(e.target.id){
+        case "grid-size-8":
+            desiredGridSize = 8;
+            break;
+        case "grid-size-16":
+            desiredGridSize = 16;
+            break;
+        case "grid-size-32":
+            desiredGridSize = 32;
+            break;
+        case "grid-size-64":
+            desiredGridSize = 64;
+            break;
+        default: 
+            desiredGridSize = 8;
+            break;
+    }
+
+    createGrid(desiredGridSize);
+});
