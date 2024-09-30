@@ -1,8 +1,12 @@
 body{
     user-select: none;
     margin: 0;
-    box-shadow: inset 0px 0px 200px 200px rgb(23, 69, 75);
-    background-color: rgb(91, 201, 164);
+    box-shadow: inset 0px 0px 100px 100px rgb(38, 106, 116);
+    background-color: rgb(80, 203, 189);
+}
+
+h1{
+    color: rgb(4, 53, 82);
 }
 
 .game-container{
@@ -28,10 +32,12 @@ body{
     background-color: grey;
     width: 32px;
     height: 32px;
-    transition: all .2s;
+    transition: all .1s;
 }
 
 .etch-node:hover{
     filter: brightness(1.25);
-    scale: 1.2;
+    scale: 1.25;
+    border-radius: 8px;
+    z-index: 1;
 }
