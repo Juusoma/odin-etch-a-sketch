@@ -1,7 +1,7 @@
 body{
     user-select: none;
     margin: 0;
-    box-shadow: inset 0px 0px 100px 100px rgb(38, 106, 116);
+    box-shadow: inset 0px 0px 64px 32px rgb(38, 106, 116);
     background-color: rgb(80, 203, 189);
 }
 
@@ -27,6 +27,7 @@ h1{
 
     border: 2px solid red;
     border-radius: 8px;
+    box-shadow: 0px 0px 32px 8px rgba(0, 0, 0, 0.175);
 }
 
 .etch-node{
@@ -39,4 +40,26 @@ h1{
     scale: 1.25;
     border-radius: 8px;
     z-index: 1;
+}
+
+.grid-size-button-container{
+    display: flex;
+    border: 2px solid red;
+    border-radius: 8px;
+    border-top: none;
+}
+
+.grid-size-button{
+    width: 100px;
+    height: 32px;
+    background-color: rgb(243, 213, 171);
+    border-color: red;
+    border-top: none;
+    cursor: pointer;
+    transition: all .12s;
+}
+
+.grid-size-button:hover{
+    scale: 1.1;
+    filter: brightness(1.1) hue-rotate(-25deg);
 }

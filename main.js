@@ -22,10 +22,9 @@ function onNodeHover(node){
     node.style.backgroundColor = etchColor;
 }
 
-function createGrid(){
+function createGrid(nodesPerLine){
     clearGrid();
 
-    const nodesPerLine = 8;
     nodeSize = gridSize / nodesPerLine;
 
     function addNode(){
@@ -43,4 +42,4 @@ function createGrid(){
     }
 }
 
-createGrid();
+createGrid(16);
