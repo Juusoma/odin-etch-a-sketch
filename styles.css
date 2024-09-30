@@ -1,0 +1,33 @@
+body{
+    user-select: none;
+    margin: 0;
+    box-shadow: inset 0px 0px 200px 200px rgb(23, 69, 75);
+    background-color: rgb(91, 201, 164);
+}
+
+.game-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.etch-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: start;
+    max-width: 128px;
+    flex-basis: 25%;
+}
+
+.etch-node{
+    background-color: grey;
+    width: 32px;
+    height: 32px;
+}
+
+.etch-node:hover{
+    background-color: red;
+}
