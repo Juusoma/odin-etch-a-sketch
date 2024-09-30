@@ -3,10 +3,13 @@ body{
     margin: 0;
     box-shadow: inset 0px 0px 64px 32px rgb(38, 106, 116);
     background-color: rgb(80, 203, 189);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 h1{
-    color: rgb(4, 53, 82);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 6px black;
+    text-transform: uppercase;
 }
 
 .game-container{
@@ -28,11 +31,17 @@ h1{
     border: 2px solid red;
     border-radius: 8px;
     box-shadow: 0px 0px 32px 8px rgba(0, 0, 0, 0.175);
+
+    padding: 4px;
 }
 
 .etch-node{
     background-color: grey;
-    transition: all .1s;
+    transition: all .25s;
+}
+
+.etch-node-active{
+    background-color: #0cc;
 }
 
 .etch-node:hover{

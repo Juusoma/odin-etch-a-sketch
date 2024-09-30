@@ -16,9 +16,15 @@ function onEtchHover(e){
     }
 }
 
+const popSound = document.querySelector("#etch-pop-sound");
+
 function onNodeHover(node){
-    const etchColor = "#0cc"
-    node.style.backgroundColor = etchColor;
+    if(node.classList.contains("etch-node-active"))
+        return;
+    
+    node.classList.add("etch-node-active");
+    
+    popSound.play();
 }
 
 function createGrid(nodesPerLine){
